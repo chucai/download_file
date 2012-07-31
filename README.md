@@ -17,11 +17,12 @@ lib/download_files/settings.rb
 
 开发过程中，使用了rspec的测试驱动开发
 * init project
+
 ```ruby
 bundle gem download_file
 ```
-* add rspec support
-update download_file.gemspec
+* add rspec supportupdate download_file.gemspec
+
 ```ruby
 s.add_development_dependency "rspec"
 s.add_development_dependency "active_support"
