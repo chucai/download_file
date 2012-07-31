@@ -22,6 +22,7 @@ module DownloadFile
 				response = Net::HTTP.get_response(uri)
 				body = response.body
 				result = JSON.parse body
+				result.sort
 			end
 
 			def download(url = "", filename = "", directory = "")
@@ -32,7 +33,7 @@ module DownloadFile
 					resp = http.get(uri.request_uri)
 				  dir_path = File.join(File.expand_path("../../../", __FILE__), settings.dir, directory)
 					FileUtils.mkdir_p(dir_path) unless File.directory? dir_path
-					file_path = File.join(dir_path, filename)
+					file_path = File.join(dir_path, filename.gsub(/\//, "").gsub(" ","").gsub("：","-"))
 					puts file_path
 					open(file_path, "wb") do |file|
 						file.write(resp.body) 

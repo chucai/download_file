@@ -8,7 +8,7 @@ class Settings
 
 	def initialize 
 	  self.config.dir       = "files"
-	  self.config.fetch_url = "your url"
+	  self.config.fetch_url = "http://1.202.208.20/abctest"
 	end
 
 end

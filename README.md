@@ -1,8 +1,8 @@
-===下载文件的小工具
+###下载文件的小工具
 
 用于网站视频的自动备份
 
-==Usage
+##使用例子
 运行命令
 ```
 ruby bin/download.rb
@@ -15,6 +15,7 @@ lib/download_files/settings.rb
 ```
 文件中
 
+##开发流程
 开发过程中，使用了rspec的测试驱动开发
 * init project
 
